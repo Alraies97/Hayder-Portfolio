@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hayder Alraies — Associate Software Engineer &amp; Backend Developer. Specializing in Python, FastAPI, PostgreSQL, and production REST APIs.">
+  <title>Hayder Alraies | Backend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#hero" class="nav__logo" aria-label="Hayder Alraies — Home">
+        <span class="nav__logo-mark">&lt;HA/&gt;</span>
+      </a>
+
+      <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero__glow hero__glow--primary" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--secondary" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <p class="hero__eyebrow reveal">Associate Software Engineer &amp; Backend Developer</p>
+        <h1 class="hero__title reveal" id="hero-heading">
+          Hayder <span class="hero__accent">Alraies</span>
+        </h1>
+        <p class="hero__summary reveal">
+          I build reliable, production-grade backends from the ground up — from low-level
+          C++ systems to REST APIs with FastAPI and PostgreSQL. Passionate about clean architecture,
+          secure authentication, and shipping services that scale with clarity and intent.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+        </div>
+        <dl class="hero__stats reveal" aria-label="Highlights">
+          <div class="hero__stat">
+            <dt>Focus</dt>
+            <dd>Backend &amp; Systems</dd>
+          </div>
+          <div class="hero__stat">
+            <dt>Stack</dt>
+            <dd>C++ · Python · FastAPI</dd>
+          </div>
+          <div class="hero__stat">
+            <dt>Approach</dt>
+            <dd>Self-Driven &amp; Pragmatic</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <header class="section__header reveal">
+          <p class="section__eyebrow">About</p>
+          <h2 class="section__title" id="about-heading">Engineering with intent</h2>
+        </header>
+        <div class="about__grid">
+          <article class="about__card reveal">
+            <h3 class="about__card-title">Who I am</h3>
+            <p>
+              I'm a self-taught software engineer who learns by building. I go deep on
+              fundamentals — memory, concurrency, data structures — and apply that rigor
+              to production backends and scalable APIs.
+            </p>
+          </article>
+          <article class="about__card reveal">
+            <h3 class="about__card-title">What I value</h3>
+            <p>
+              Readable code, thoughtful system design, and tools that stay out of the way.
+              I care about performance without sacrificing maintainability, and I ship
+              iteratively with a strong focus on user experience.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <header class="section__header reveal">
+          <p class="section__eyebrow">Skills</p>
+          <h2 class="section__title" id="skills-heading">Tools I work with</h2>
+          <p class="section__subtitle">
+            A stack built for performance, scalability, and developer velocity.
+          </p>
+        </header>
+
+        <div class="skills__grid" id="skills-grid" role="list">
+          <article class="skill-card reveal" role="listitem" data-skill="cpp">
+            <div class="skill-card__icon" aria-hidden="true">C++</div>
+            <h3 class="skill-card__name">C++</h3>
+            <p class="skill-card__desc">Systems programming, data structures, and performance-critical logic.</p>
+            <div class="skill-card__bar" aria-hidden="true"><span style="--level: 90%"></span></div>
+          </article>
+
+          <article class="skill-card reveal" role="listitem" data-skill="python">
+            <div class="skill-card__icon" aria-hidden="true">Py</div>
+            <h3 class="skill-card__name">Python</h3>
+            <p class="skill-card__desc">Backend services, scripting, and rapid prototyping at scale.</p>
+            <div class="skill-card__bar" aria-hidden="true"><span style="--level: 92%"></span></div>
+          </article>
+
+          <article class="skill-card reveal" role="listitem" data-skill="fastapi">
+            <div class="skill-card__icon" aria-hidden="true">API</div>
+            <h3 class="skill-card__name">FastAPI</h3>
+            <p class="skill-card__desc">Async REST APIs with validation, docs, and clean dependency injection.</p>
+            <div class="skill-card__bar" aria-hidden="true"><span style="--level: 88%"></span></div>
+          </article>
+
+          <article class="skill-card reveal" role="listitem" data-skill="linux">
+            <div class="skill-card__icon" aria-hidden="true">Ln</div>
+            <h3 class="skill-card__name">Linux</h3>
+            <p class="skill-card__desc">Server administration, shell tooling, and production environments.</p>
+            <div class="skill-card__bar" aria-hidden="true"><span style="--level: 85%"></span></div>
+          </article>
+
+          <article class="skill-card reveal" role="listitem" data-skill="redis">
+            <div class="skill-card__icon" aria-hidden="true">Rd</div>
+            <h3 class="skill-card__name">Redis</h3>
+            <p class="skill-card__desc">Caching, pub/sub messaging, and real-time session management.</p>
+            <div class="skill-card__bar" aria-hidden="true"><span style="--level: 82%"></span></div>
+          </article>
+
+          <article class="skill-card reveal" role="listitem" data-skill="git">
+            <div class="skill-card__icon" aria-hidden="true">Git</div>
+            <h3 class="skill-card__name">Git</h3>
+            <p class="skill-card__desc">Version control workflows, branching strategies, and clean history.</p>
+            <div class="skill-card__bar" aria-hidden="true"><span style="--level: 90%"></span></div>
+          </article>
+
+          <article class="skill-card reveal" role="listitem" data-skill="github">
+            <div class="skill-card__icon" aria-hidden="true">GH</div>
+            <h3 class="skill-card__name">GitHub</h3>
+            <p class="skill-card__desc">Collaboration, CI/CD pipelines, and open-source contribution.</p>
+            <div class="skill-card__bar" aria-hidden="true"><span style="--level: 88%"></span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <header class="section__header reveal">
+          <p class="section__eyebrow">Projects</p>
+          <h2 class="section__title" id="projects-heading">Selected work</h2>
+          <p class="section__subtitle">
+            Production backends and systems — from REST APIs to low-level data structures.
+          </p>
+        </header>
+
+        <div class="projects__list">
+          <article class="project-card reveal" aria-labelledby="project-pulsenet">
+            <div class="project-card__visual project-card__visual--pulsenet" aria-hidden="true">
+              <div class="project-card__pulse-ring"></div>
+              <span class="project-card__badge">Featured</span>
+            </div>
+            <div class="project-card__body">
+              <header class="project-card__header">
+                <h3 class="project-card__title" id="project-pulsenet">PulseNet</h3>
+                <p class="project-card__type">Social Media REST API</p>
+              </header>
+              <p class="project-card__desc">
+                A production-grade social media REST API built with FastAPI and Neon PostgreSQL,
+                featuring secure JWT authentication and optimized relational schema design.
+              </p>
+              <ul class="project-card__tags" aria-label="Technologies used">
+                <li>Python</li>
+                <li>FastAPI</li>
+                <li>PostgreSQL</li>
+                <li>JWT</li>
+                <li>Git</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="#" class="project-card__link" aria-label="View PulseNet live demo">Live Demo</a>
+                <a href="#" class="project-card__link project-card__link--secondary" aria-label="View PulseNet source code on GitHub">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal project-card--reverse" aria-labelledby="project-graphflow">
+            <div class="project-card__visual project-card__visual--graphflow" aria-hidden="true">
+              <svg class="project-card__graph" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="60" r="8" stroke="currentColor" stroke-width="2"/>
+                <circle cx="100" cy="30" r="8" stroke="currentColor" stroke-width="2"/>
+                <circle cx="100" cy="90" r="8" stroke="currentColor" stroke-width="2"/>
+                <circle cx="170" cy="60" r="8" stroke="currentColor" stroke-width="2"/>
+                <line x1="38" y1="56" x2="92" y2="34" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                <line x1="38" y1="64" x2="92" y2="86" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                <line x1="108" y1="34" x2="162" y2="56" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                <line x1="108" y1="86" x2="162" y2="64" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="project-card__body">
+              <header class="project-card__header">
+                <h3 class="project-card__title" id="project-graphflow">Graph-flow</h3>
+                <p class="project-card__type">C++ Data Structures</p>
+              </header>
+              <p class="project-card__desc">
+                A from-scratch implementation of graph algorithms and custom data structures
+                in C++. Covers adjacency representations, traversal (BFS/DFS), shortest paths,
+                and memory-efficient node management — built to deepen systems-level understanding.
+              </p>
+              <ul class="project-card__tags" aria-label="Technologies used">
+                <li>C++</li>
+                <li>Graph Theory</li>
+                <li>STL</li>
+                <li>Algorithms</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="#" class="project-card__link" aria-label="View Graph-flow source code on GitHub">Source Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact" id="contact" aria-labelledby="contact-heading">
+    <div class="contact__glow" aria-hidden="true"></div>
+    <div class="container contact__inner">
+      <header class="contact__header reveal">
+        <p class="section__eyebrow">Contact</p>
+        <h2 class="contact__title" id="contact-heading">Let's build something</h2>
+        <p class="contact__subtitle">
+          Open to collaborations, freelance work, and interesting engineering challenges.
+        </p>
+      </header>
+
+      <div class="contact__actions reveal">
+        <a href="mailto:alraies.eng@gmail.com" class="contact__link">
+          <span class="contact__link-label">Email</span>
+          <span class="contact__link-value">alraies.eng@gmail.com</span>
+        </a>
+        <a href="https://github.com/Alraies97" class="contact__link" target="_blank" rel="noopener noreferrer">
+          <span class="contact__link-label">GitHub</span>
+          <span class="contact__link-value">github.com/Alraies97</span>
+        </a>
+        <a href="https://www.linkedin.com/in/hayder-alraies" class="contact__link" target="_blank" rel="noopener noreferrer">
+          <span class="contact__link-label">LinkedIn</span>
+          <span class="contact__link-value">linkedin.com/in/hayder-alraies</span>
+        </a>
+      </div>
+
+      <p class="contact__footer reveal">
+        <small>&copy; <span id="year"></span> Hayder Alraies. Crafted with care.</small>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
