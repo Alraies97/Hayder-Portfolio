@@ -3,29 +3,29 @@
    ========================================================================== */
 
 :root {
-  --color-bg: #0a0a0f;
-  --color-bg-elevated: #12121a;
-  --color-bg-card: #16161f;
-  --color-bg-card-hover: #1c1c28;
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-border-hover: rgba(255, 255, 255, 0.16);
-  --color-text: #e8e8ed;
-  --color-text-muted: #8b8b9e;
-  --color-text-subtle: #5c5c6f;
-  --color-accent: #7c5cff;
-  --color-accent-light: #a78bfa;
-  --color-accent-glow: rgba(124, 92, 255, 0.35);
-  --color-cyan: #22d3ee;
-  --color-cyan-glow: rgba(34, 211, 238, 0.2);
+  --color-bg: #000000;
+  --color-bg-elevated: #0b0b0b;
+  --color-bg-card: #111111;
+  --color-bg-card-hover: #171717;
+  --color-border: rgba(245, 245, 245, 0.08);
+  --color-border-hover: rgba(245, 245, 245, 0.16);
+  --color-text: #f5f5f5;
+  --color-text-muted: #b7b7b7;
+  --color-text-subtle: #7d7d7d;
+  --color-accent: #800020;
+  --color-accent-light: #a33a4d;
+  --color-accent-glow: rgba(128, 0, 32, 0.28);
+  --color-cyan: #b85a68;
+  --color-cyan-glow: rgba(184, 90, 104, 0.2);
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
   --radius-full: 9999px;
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.45);
   --shadow-glow: 0 0 60px var(--color-accent-glow);
-  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --header-height: 72px;
   --container: min(1120px, 100% - 2rem);
 }
@@ -53,6 +53,8 @@ body {
   line-height: 1.6;
   color: var(--color-text);
   background-color: var(--color-bg);
+  background-image: radial-gradient(circle at top left, rgba(128, 0, 32, 0.16), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(128, 0, 32, 0.08), transparent 32%);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -196,8 +198,8 @@ button {
 
 .nav__link--cta {
   padding: 0.5rem 1.25rem;
-  background: rgba(124, 92, 255, 0.15);
-  border: 1px solid rgba(124, 92, 255, 0.35);
+  background: rgba(128, 0, 32, 0.16);
+  border: 1px solid rgba(128, 0, 32, 0.32);
   border-radius: var(--radius-full);
   color: var(--color-accent-light);
 }
@@ -207,7 +209,7 @@ button {
 }
 
 .nav__link--cta:hover {
-  background: rgba(124, 92, 255, 0.25);
+  background: rgba(128, 0, 32, 0.24);
   border-color: var(--color-accent);
 }
 
@@ -254,7 +256,7 @@ button {
   font-size: 0.95rem;
   font-weight: 600;
   border-radius: var(--radius-full);
-  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), background-color var(--transition), color var(--transition), border-color var(--transition);
 }
 
 .btn:hover {
@@ -262,13 +264,13 @@ button {
 }
 
 .btn--primary {
-  background: linear-gradient(135deg, var(--color-accent), #6d28d9);
-  color: #fff;
-  box-shadow: 0 4px 20px var(--color-accent-glow);
+  background: linear-gradient(135deg, var(--color-accent), #6b0f1a);
+  color: #fdfdfd;
+  box-shadow: 0 8px 24px var(--color-accent-glow);
 }
 
 .btn--primary:hover {
-  box-shadow: 0 8px 32px var(--color-accent-glow);
+  box-shadow: 0 12px 32px var(--color-accent-glow);
 }
 
 .btn--ghost {
@@ -442,12 +444,14 @@ button {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  transition: border-color var(--transition), transform var(--transition);
+  transition: border-color var(--transition), background-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .about__card:hover {
-  border-color: var(--color-border-hover);
+  border-color: rgba(128, 0, 32, 0.42);
+  background: var(--color-bg-card-hover);
   transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
 }
 
 .about__card-title {
@@ -479,21 +483,21 @@ button {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   overflow: hidden;
-  transition: border-color var(--transition), background var(--transition), transform var(--transition), box-shadow var(--transition);
+  transition: border-color var(--transition), background-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .skill-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(124, 92, 255, 0.06), transparent 60%);
+  background: linear-gradient(135deg, rgba(128, 0, 32, 0.1), transparent 65%);
   opacity: 0;
   transition: opacity var(--transition);
 }
 
 .skill-card:hover,
 .skill-card.is-active {
-  border-color: rgba(124, 92, 255, 0.4);
+  border-color: rgba(128, 0, 32, 0.42);
   background: var(--color-bg-card-hover);
   transform: translateY(-4px);
   box-shadow: var(--shadow-card);
@@ -515,8 +519,8 @@ button {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-accent-light);
-  background: rgba(124, 92, 255, 0.12);
-  border: 1px solid rgba(124, 92, 255, 0.25);
+  background: rgba(128, 0, 32, 0.14);
+  border: 1px solid rgba(128, 0, 32, 0.28);
   border-radius: var(--radius-sm);
 }
 
@@ -544,7 +548,7 @@ button {
   display: block;
   height: 100%;
   width: 0;
-  background: linear-gradient(90deg, var(--color-accent), var(--color-cyan));
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
   border-radius: var(--radius-full);
   transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -572,12 +576,14 @@ button {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  transition: border-color var(--transition), box-shadow var(--transition);
+  transition: border-color var(--transition), background-color var(--transition), box-shadow var(--transition), transform var(--transition);
 }
 
 .project-card:hover {
-  border-color: var(--color-border-hover);
+  border-color: rgba(128, 0, 32, 0.42);
+  background: var(--color-bg-card-hover);
   box-shadow: var(--shadow-card);
+  transform: translateY(-3px);
 }
 
 .project-card--reverse {
@@ -599,19 +605,19 @@ button {
 }
 
 .project-card__visual--pulsenet {
-  background: linear-gradient(145deg, #1a1033 0%, #0f0f18 50%, #0a1628 100%);
-  border: 1px solid rgba(124, 92, 255, 0.2);
+  background: linear-gradient(145deg, #150508 0%, #0b0b0b 50%, #1c0a12 100%);
+  border: 1px solid rgba(128, 0, 32, 0.2);
 }
 
 .project-card__visual--graphflow {
-  background: linear-gradient(145deg, #0f1419 0%, #12121a 50%, #0a1a1f 100%);
-  border: 1px solid rgba(34, 211, 238, 0.15);
-  color: var(--color-cyan);
+  background: linear-gradient(145deg, #0d0d0d 0%, #111111 50%, #140707 100%);
+  border: 1px solid rgba(128, 0, 32, 0.18);
+  color: var(--color-accent-light);
 }
 
 .project-card__visual--qazvelo {
-  background: linear-gradient(145deg, #0a1a1f 0%, #0f1a22 50%, #0a2a2f 100%);
-  border: 1px solid rgba(34, 211, 238, 0.2);
+  background: linear-gradient(145deg, #0b0b0b 0%, #111111 50%, #140707 100%);
+  border: 1px solid rgba(128, 0, 32, 0.2);
 }
 
 .project-card__chart {
@@ -648,8 +654,8 @@ button {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--color-accent-light);
-  background: rgba(124, 92, 255, 0.15);
-  border: 1px solid rgba(124, 92, 255, 0.3);
+  background: rgba(128, 0, 32, 0.16);
+  border: 1px solid rgba(128, 0, 32, 0.3);
   border-radius: var(--radius-full);
 }
 
@@ -706,11 +712,11 @@ button {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--color-accent-light);
-  transition: color var(--transition);
+  transition: color var(--transition), opacity var(--transition);
 }
 
 .project-card__link:hover {
-  color: var(--color-cyan);
+  color: var(--color-text);
 }
 
 .project-card__link--secondary {
@@ -787,11 +793,12 @@ button {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition), background-color var(--transition);
 }
 
 .contact__link:hover {
-  border-color: rgba(124, 92, 255, 0.4);
+  border-color: rgba(128, 0, 32, 0.42);
+  background: var(--color-bg-card-hover);
   transform: translateY(-2px);
   box-shadow: var(--shadow-card);
 }
