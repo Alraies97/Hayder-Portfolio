@@ -609,6 +609,16 @@ button {
   color: var(--color-cyan);
 }
 
+.project-card__visual--qazvelo {
+  background: linear-gradient(145deg, #0a1a1f 0%, #0f1a22 50%, #0a2a2f 100%);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+}
+
+.project-card__chart {
+  width: 85%;
+  opacity: 0.9;
+}
+
 .project-card__pulse-ring {
   width: 80px;
   height: 80px;
