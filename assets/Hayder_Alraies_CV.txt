@@ -1,4 +1,0 @@
-Hayder Alraies
-Backend & Systems Software Engineer
-
-Specializing in Python, Modern C++, Linux, networking, distributed systems, and high-performance software.
