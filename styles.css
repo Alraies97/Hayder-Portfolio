@@ -620,9 +620,21 @@ button {
   border: 1px solid rgba(128, 0, 32, 0.2);
 }
 
+.project-card__visual--boltkv {
+  background: linear-gradient(145deg, #080808 0%, #111111 50%, #180909 100%);
+  border: 1px solid rgba(128, 0, 32, 0.2);
+  color: var(--color-accent-light);
+}
+
 .project-card__chart {
   width: 85%;
   opacity: 0.9;
+}
+
+.project-card__boltkv-graphic {
+  width: 78%;
+  max-width: 220px;
+  opacity: 0.95;
 }
 
 .project-card__pulse-ring {
@@ -716,6 +728,23 @@ button {
 }
 
 .project-card__link:hover {
+  color: var(--color-text);
+}
+
+.project-card__link--primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.15rem;
+  border-radius: var(--radius-full);
+  background: rgba(128, 0, 32, 0.16);
+  border: 1px solid rgba(128, 0, 32, 0.32);
+  color: var(--color-accent-light);
+}
+
+.project-card__link--primary:hover {
+  background: rgba(128, 0, 32, 0.24);
+  border-color: var(--color-accent);
   color: var(--color-text);
 }
 
